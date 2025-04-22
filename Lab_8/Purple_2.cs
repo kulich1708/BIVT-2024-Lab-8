@@ -12,7 +12,7 @@ namespace Lab_8
         private static readonly int targetLength = 50;
         private string[] _words;
 
-        public string[] Output => (string[])_output.Clone();
+        public string[] Output => (string[])_output?.Clone();
 
         public Purple_2(string input) : base(input) { }
 
@@ -67,7 +67,7 @@ namespace Lab_8
         {
             if (_output == null) return null;
 
-            return String.Join('\n', _output);
+            return String.Join(Environment.NewLine, _output);
         }
     }
 }
